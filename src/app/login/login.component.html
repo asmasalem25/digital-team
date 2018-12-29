@@ -1,40 +1,51 @@
-<!--
-    <section id="pricing" class="secondary-color text-center scrollto clearfix ">
-    <div class="row clearfix">
-  
-      <div class="container">
-  
-        <div class="center-form panel">
-          <div class="panel-body">
-          <h4 class="text-center"><i class="ion-log-in"></i> Login</h4>
-        <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
-                     <form >
-            <div class="form-group">
-              <input type="text" class="form-control input-lg" name="email" placeholder="Email" formControlName="email">
-              <span class="ion-at form-control-icon"></span> 
+<section id="pricing" class="secondary-color text-center scrollto clearfix ">
+  <div class="row clearfix">
+
+    <div class="container">
+
+      <div class="center-form panel">
+        <div class="panel-body">
+        <h4 class="text-center"><i class="ion-log-in"></i> Login</h4>
+       <!--   <form #addForm ="ngForm" (ngSubmit)='addProduct(addForm)'>
+          name: <input #name ='ngModel'required  minlength="10" name ='name' ngModel/>
+            <span *ngIf ='addForm.submitted && name.errors.required'> u have fill the name</span>
+            <span *ngIf ='addForm.submitted && name.errors.minlength'> u have </span>  
+             Product Quantity:<input name ='quantity"' ngModel/> 
+            price:<input name= 'price' ngModel/> -->
+        <form  #addForm ="ngForm"  (ngSubmit)='login(addForm)'>
+          <div class="form-group">
+              Email: <input  class="form-control form-names input-lg"  #name ='ngModel' required  minlength="30" name ='Email' ngModel/>
+            <span class="ion-at form-control-icon"></span>
+            <span *ngIf ='addForm.submitted && name.errors.required'> u have fill email for example@gmail.com</span>
+            <span *ngIf ='addForm.submitted && name.errors.minlength'> un correct email </span>  
+          </div>
+          <div class="form-group">
+              Password: <input   class="form-control input-lg" #name ='ngModel'required  minlength="10"  ngModel type="password"  name ='Password'/>
+              <span class="ion-key form-control-icon"></span> 
+              <span *ngIf ='addForm.submitted && name.errors.required'> write your password</span>
+              <span *ngIf ='addForm.submitted && name.errors.minlength'> your password more 10 character </span>  
             </div>
-            <div class="form-group">
-                <input type="password" class="form-control input-lg" name="password" placeholder="Password" formControlName="password">
-                <span class="ion-key form-control-icon"></span> 
-            </div>
-  
-            <button type="submit" class="btn btn-block btn-success"> Login</button>
-  
-            <p class="text-center">
-              <small>Don't have an account yet? <a routerLink="/signup">Sign up</a></small>
-  
-            </p>
-  
-          </form>
-  
-        </div>
-        </div>
-  
+          <button type="submit" class="btn btn-block btn-success" (click)="login()"> Login</button>
+          <ul *ngFor ="let tmember of teamMembers">
+          <li>{{tmember.firstName}}</li></ul>
+          <p class="text-center">
+            <small>Don't have an account yet? <a routerLink="/Signup">Sign up</a></small>
+
+          </p>
+
+        </form>
+
       </div>
-  
+      </div>
+
     </div>
-  <section>-->
-      <form #addForm ="ngForm" (ngSubmit)='addProduct(addForm)'>
+
+  </div>
+<section>
+  <!--  exersice in class about form -->
+    
+    
+    <!--<form #addForm ="ngForm" (ngSubmit)='addProduct(addForm)'>
     <div class="container"> 
    name: <input #name ='ngModel'required  minlength="10" name ='name' ngModel/>
    <span *ngIf ='addForm.submitted && name.errors.required'> u have fill the name</span>
@@ -45,8 +56,8 @@
     <br> 
     <br>
     <button type="submit" > Add Product   </button>
-    <!--<button (click)="editProduct()">     Edit Product </button>
-   <button (click)= "deleteProduct()">    Delete Product </button>-->
+   <button (click)="editProduct()">     Edit Product </button>
+   <button (click)= "deleteProduct()">    Delete Product </button>
     <br>
     <br>
     <br>
@@ -69,6 +80,6 @@
       </tbody>
     </table>
    
-    
+  -->
 
      

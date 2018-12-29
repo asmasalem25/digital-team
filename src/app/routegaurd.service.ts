@@ -1,8 +1,8 @@
-import { Injectable } from '@angular/core';
+/*import { Injectable } from '@angular/core';
 import { CanActivate } from '@angular/router/src/utils/preactivation';
 import { Router, ActivatedRoute, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
-import { url } from 'inspector';
-
+//import { url } from 'inspector';
+/*
 @Injectable({
   providedIn: 'root'
 })
@@ -16,4 +16,4 @@ export class RoutegaurdService implements CanActivate {
     this.router.navigate(['/Login'],{queryParams:{returnUrl:state.url}})
     return false
 }
-}
+}*/

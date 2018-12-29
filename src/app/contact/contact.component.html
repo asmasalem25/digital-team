@@ -1,3 +1,4 @@
+
 <section id="pricing" class="secondary-color text-center scrollto clearfix ">
     <div class="row clearfix">
   
@@ -15,13 +16,6 @@
                Product Quantity:<input name ='quantity"' ngModel/> 
               price:<input name= 'price' ngModel/> -->
           <form  #addForm ="ngForm"  (ngSubmit)='login(addForm)'>
-          
-                First Name: <input   class="form-control input-lg"  #name ='ngModel'required  minlength="10" name ='Email' ngModel/>
-              <span class="ion-at form-control-icon"></span> 
-            
-                Last Name: <input  class="form-control input-lg"  #name ='ngModel'required  minlength="10" name ='Email' ngModel/>
-              <span class="ion-at form-control-icon"></span> 
-         
                 Email: <input  class="form-control input-lg"  #name ='ngModel'required  minlength="10" name ='Email' ngModel/>
               <span class="ion-at form-control-icon"></span> 
             
@@ -33,8 +27,9 @@
             <span class="ion-at form-control-icon"></span> 
     
   
-            <button type="submit" class="btn btn-block btn-success" (click)=" addTeamMember() ">Sign Up</button>
-  
+            <button type="submit" class="btn btn-block btn-success">Sign Up</button>
+           <br>
+            <button type="reset" class="btn btn-block btn-success" (click)="OnReset(addForm )">Reset</button>
             <p class="text-center">
               <small>Aready have account ! <a routerLink="/Login">Log in </a></small>
   
@@ -89,4 +84,4 @@
      
     -->
   
-       
+    <!--<app-social><button>as</button></app-social>-->

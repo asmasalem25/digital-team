@@ -1,23 +1,25 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
 import { Observable} from 'rxjs'
+import { IMemberTeam } from './member';
 @Injectable({
   providedIn: 'root'
 })
 export class AdvService {
-  url="  http://localhost:3000/teamName"
-  pro=[]
+  url="   http://localhost:3000/teemMember"
+ 
   constructor( private http:HttpClient) { 
 
   }
 
-  getproduct(): Observable<[]>{
+  getMember(): Observable<IMemberTeam[]>{
     
-    return this.http.get<[]>(this.url)
+    return this.http.get<IMemberTeam[]>(this.url)
     
   }
-  addProduct(obj){
-    return this.http.post<[]>(this.url,obj);
-    console.log(obj);
-  }
+  // addMember(obj){
+    
+  //   return this.http.post<IMemberTeam[]>(this.url,obj);
+  //   console.log(obj);
+  // }
 }

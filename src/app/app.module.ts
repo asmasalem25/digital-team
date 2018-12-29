@@ -4,11 +4,12 @@ import { FormsModule }   from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WhatWeDoComponent } from './what-we-do/what-we-do.component';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 import { TalentedTeamComponent } from './talented-team/talented-team.component';
 import { OurProtofolioComponent } from './our-protofolio/our-protofolio.component';
 import { OurPricingComponent } from './our-pricing/our-pricing.component';
-import { ContactUSComponent } from './contact-us/contact-us.component';
+// import { ContactUSComponent } from './contact-us/contact-us.component';
 import { NavComponent } from './nav/nav.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ContentComponent } from './content/content.component';
@@ -17,19 +18,23 @@ import { ClientComponent } from './client/client.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { SocialComponent } from './social/social.component';
-import { LoginComponent } from './login/login.component';
+ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { BlogComponent } from './blog/blog.component';
+
+import { ContactComponent } from './contact/contact.component';
+import { AdvService } from './adv.service';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     WhatWeDoComponent,
-    
+  
     TalentedTeamComponent,
     OurProtofolioComponent,
     OurPricingComponent,
-    ContactUSComponent,
+    // ContactUSComponent,
     NavComponent,
     ContentComponent,
     TestamonialComponent,
@@ -37,9 +42,11 @@ import { BlogComponent } from './blog/blog.component';
     FooterComponent,
     HeaderComponent,
     SocialComponent,
-    LoginComponent,
+     LoginComponent,
     SignupComponent,
-    BlogComponent
+    BlogComponent,
+    ContactComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -47,7 +54,43 @@ import { BlogComponent } from './blog/blog.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [AdvService],
+  bootstrap: [AppComponent],
+ 
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 export class AppModule { }
+

@@ -10,19 +10,25 @@ import { TestamonialComponent } from './testamonial/testamonial.component';
 import { ClientComponent } from './client/client.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
-import{RoutegaurdService}  from './routegaurd.service'
+//import{RoutegaurdService}  from './routegaurd.service'
 import { BlogComponent } from './blog/blog.component';
+import { SignupComponent } from './signup/signup.component';
+import { ContactComponent } from './contact/contact.component';
+
 const routes: Routes = [
   { path: '', redirectTo: '/Home', pathMatch: 'full' },
   {path:'Home', component :HeaderComponent },
+  {path:'Contact', component :ContactComponent },
+  {path:'Signup', component :SignupComponent },
   {path:'About', component :WhatWeDoComponent},
   {path:'Service', component :ContentComponent},
   {path:'Testamonial', component :TestamonialComponent },
   {path:'Gallary', component :OurProtofolioComponent},
   {path:'Clients', component :ClientComponent},
   {path:'Pricing', component :OurPricingComponent },
-  {path:'Blog', component :BlogComponent   ,canActivate:[RoutegaurdService],
+  {path:'Blog', component :BlogComponent  },
   {path:'Login', component :LoginComponent },
+  {path:'Contact', component :LoginComponent },
 
 ];
 
